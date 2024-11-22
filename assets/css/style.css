@@ -1,0 +1,84 @@
+.body {
+  margin: 0%;
+  padding: 0%;
+}
+.padre {
+  display: grid;
+  grid-template-areas:
+    "barra"
+    "filtro"
+    "contenedor_productos"
+    "paginas";
+  font-family: monospace;
+}
+
+.barra {
+  grid-area: barra;
+  background-color: blue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.filtro {
+  grid-area: filtro;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2%;
+  margin: 2% 2% 2% 2%;
+}
+
+.contenedor_productos {
+  grid-area: contenedor_productos;
+  background-color: white;
+}
+
+.paginas {
+  grid-area: paginas;
+  background-color: blue;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 2%;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+
+.imagen_producto {
+  width: 20rem;
+  height: 25rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+}
+
+.boton {
+  border-radius: 5px !important;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 2%;
+  font-size: xx-large;
+}
