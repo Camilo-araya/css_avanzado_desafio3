@@ -38,17 +38,6 @@
 .contenedor_productos {
   grid-area: contenedor_productos;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-
-
-}
-
-@media (min-width: 576px) {
-  .contenedor_productos{
-  background-color: red;
-  flex-direction: row;
-}
 }
 
 .paginas {
