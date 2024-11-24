@@ -8,8 +8,9 @@
     "barra"
     "filtro"
     "contenedor_productos"
-    "paginas";
+    "footer";
   font-family: monospace;
+  width: 100%;
 }
 
 .barra {
@@ -38,18 +39,22 @@
 .contenedor_productos {
   grid-area: contenedor_productos;
   background-color: white;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ 
 }
-
-.paginas {
-  grid-area: paginas;
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: end;
+  justify-content: center;
   background-color: blue;
   color: white;
-
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  margin-top: 2%;
+  width: 100%;
+ 
 }
+
 
 .producto {
   display: flex;
@@ -63,14 +68,8 @@
   height: 25rem;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  background-color: blue;
-  color: white;
-}
 
-.boton {
+button {
   border-radius: 5px !important;
   padding: 5px;
   background-color: blue;
@@ -82,3 +81,126 @@ h2 {
   margin-bottom: 2%;
   font-size: xx-large;
 }
+
+.paginas{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  color: black;
+  font-family: monospace;
+}
+
+.paginas a{
+  font-size: 1rem;
+  padding: 1%;
+}
+
+
+/* VERSIÓN DESKTOP */
+
+@media(min-width:576px){
+  body{
+    background-color:white;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+  }
+  .padre{
+    display: grid;
+    grid-template-areas:
+      "barra" 
+      "filtro"
+      "contenedor_productos" 
+      "footer";
+    
+      margin: 0%;
+      padding: 0%;
+      
+
+
+    
+  }
+  .barra{
+    grid-area: barra;
+    background-color: blue;
+    padding: 10px;
+    
+    margin: 0%;
+
+  }
+  .filtro{
+    grid-area: filtro;
+    background-color: white;
+    padding: 2%;
+    margin: 2% 2% 2% 2%;
+  
+  }
+  .contenedor_productos{
+    grid-area: contenedor_productos;
+    background-color: white;
+    padding: 2%;
+    margin: 2% 2% 2% 2%;
+    display:flex;
+    flex-direction: row;
+    gap: 2%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    
+  }
+  .footer{
+    grid-area: footer;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .paginas{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+   
+    margin: 0%;
+    padding: 0%;
+    height: 5rem;
+    
+  }
+  .producto{
+    width: 20%;
+   
+  }
+
+  .barra h1{
+    font-size: 3rem;
+
+  }
+
+  .barra i{
+    font-size: 3rem;
+  }
+.filtro label{
+  font-size: 1.5rem;
+}
+  .filtro select{
+    font-size: 1.5rem;
+  }
+
+  .contenedor_productos h2{
+    font-size: 2rem;
+  }
+ 
+.paginas a{
+  font-size: 2rem;
+  padding: 1%;
+}
+}
+
